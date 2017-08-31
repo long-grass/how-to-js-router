@@ -6,7 +6,7 @@ module.exports = options => {
     },
     devtool: 'source-map',
     devServer: {
-       port: 2013,
+       port: 2014,
        host: '0.0.0.0',
        historyApiFallback: {
          rewrites: [{
