@@ -1,0 +1,24 @@
+{
+  "name": "delph",
+  "version": "1.0.0",
+  "description": "client side js router",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config webpack/webpack.config.js --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cerico/delph.git"
+  },
+  "author": "garethrobertlee@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cerico/delph/issues"
+  },
+  "homepage": "https://github.com/cerico/delph#readme",
+  "devDependencies": {
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
