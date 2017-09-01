@@ -1,7 +1,6 @@
 export class Delph {
 
-    constructor(routes,el){
-        this.routes = routes
+    constructor(el){
         this.el = el
     }
 
