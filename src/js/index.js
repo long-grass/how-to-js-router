@@ -1,9 +1,8 @@
-
 export class Index {
 
     constructor(){
-      let div = document.getElementById('nav')
-      nav.innerHTML = "nav"
+      let div = document.getElementById('header')
+      div.innerHTML = "click"
     }
 
 
