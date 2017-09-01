@@ -1,6 +1,8 @@
+import { Page } from './page';
+
 export const routes = {
-    glossop: 'derbyshire',
-    kendal:  'cumbria',
-    hereford:  'herefordshire',
-    malton:  'north yorkshire'
+    glossop: new Page('glossop'),
+    kendal:  new Page('kendal'),
+    hereford:  new Page('hereford'),
+    malton:  new Page('malton')
 }

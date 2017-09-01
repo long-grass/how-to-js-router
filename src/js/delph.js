@@ -4,9 +4,9 @@ export class Delph {
         this.routes = routes
         this.el = el
     }
-    
-    load(page){
-        const data = this.routes[page]
-        this.el.innerHTML = data
+
+    load(page){ 
+        let route =  this.routes[page]  
+        route.load().then(r => route.show(this.el))
     }
 }
