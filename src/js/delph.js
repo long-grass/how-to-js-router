@@ -6,6 +6,7 @@ export class Delph {
     }
     
     load(page){
-        this.el.innerHTML = page
+        const data = this.routes[page]
+        this.el.innerHTML = data
     }
 }
