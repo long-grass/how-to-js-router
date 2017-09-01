@@ -5,7 +5,8 @@ export class Delph {
         this.el = el
     }
 
-    load(page){     
-        this.el.innerHTML = page
+    load(page){ 
+        let route =  this.routes[page]  
+        route.load().then(r => route.show(this.el))
     }
 }

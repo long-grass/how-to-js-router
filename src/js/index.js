@@ -20,6 +20,7 @@ export class Index {
     }
  
     load(link){
+      console.log(link)
       this.delph.load(link)
     }
     
