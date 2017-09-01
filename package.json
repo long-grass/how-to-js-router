@@ -1,5 +1,5 @@
 {
-  "name": "delph",
+  "name": "how-to-js-router",
   "version": "1.0.0",
   "description": "client side js router",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/cerico/delph.git"
+    "url": "git+ssh://git@github.com/cerico/how-to-js-router.git"
   },
   "author": "garethrobertlee@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cerico/delph/issues"
+    "url": "https://github.com/cerico/how-to-js-router/issues"
   },
-  "homepage": "https://github.com/cerico/delph#readme",
+  "homepage": "https://github.com/cerico/how-to-js-router#readme",
   "devDependencies": {
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
