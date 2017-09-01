@@ -1,10 +1,11 @@
 export class Delph {
-
-    constructor(el){
+    
+    constructor(routes,el){
+        this.routes = routes
         this.el = el
     }
-
-    load(page){     
+    
+    load(page){
         this.el.innerHTML = page
     }
 }
