@@ -3,9 +3,10 @@ import { routes } from './routes'
 
 export class Index {
 
-    constructor(){      
+    constructor(){
+      const page = window.location.pathname.substr(1) || ''
       let main = document.getElementById('main')
-      this.delph = new Delph(routes,main)
+      this.delph = new Delph(routes, main, page)
       this.makeHeader(routes)
     }
 
