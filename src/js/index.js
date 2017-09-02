@@ -14,7 +14,7 @@ export class Index {
       let el = document.getElementById('header')
       Object.keys(routes).map(route => {
         let e = document.createElement("li");
-        e.innerHTML = route
+        e.innerHTML = route || "index"
         e.addEventListener('click', () => {this.load(route)})
         el.appendChild(e);
       })
