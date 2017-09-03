@@ -12,13 +12,15 @@ export class Delph {
       let content = "";
       if (event.state) {
         content = event.state.page;
-        this.load(content)
+        this.load(content, true)
       }
     }
   }
 
-  load(page){
-    history.pushState({ page}, null, `/${page}`);
+  load(page, backButtonUsed){
+    if (!backButtonUsed){
+      history.pushState({ page}, null, `/${page}`);
+    }
     let route =  this.routes[page];
     if (route) {
       route.load().then(r => route.show(this.el));
