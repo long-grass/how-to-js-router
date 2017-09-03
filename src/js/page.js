@@ -1,6 +1,6 @@
 export class Page {
   constructor(url) {
-    this.url = `src/views/${url}.html`;
+    this.url = `views/${url}.html`;
   }
 
   load() {

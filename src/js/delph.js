@@ -8,7 +8,7 @@ export class Delph {
   }
     
   handleBackButton(){    
-    window.onpopstate = () => {  
+    window.onpopstate = (event) => {  
       let content = "";
       if (event.state) {
         content = event.state.page;
