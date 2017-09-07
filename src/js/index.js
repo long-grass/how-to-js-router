@@ -1,11 +1,13 @@
 import { Delph } from './delph'
 import { routes } from './routes'
+import { ComponentRegistry } from "./utils/component-registry";
 
 export class Index {
 
     constructor(){
       const page = window.location.pathname.substr(1) || ''
       let main = document.getElementById('main')
+      this.registerComponents(routes)
       this.delph = new Delph(routes, main, page)
       this.makeHeader(routes)
     }
@@ -19,9 +21,12 @@ export class Index {
         el.appendChild(e);
       })
     }
+
+    registerComponents(routes){
+      return ComponentRegistry.register(routes);
+    }
  
     load(link){
-      console.log(link)
       this.delph.load(link)
     }
     
