@@ -24,6 +24,7 @@ export class Delph {
     let route =  this.routes[page];
     if (route) {
       console.log(new route)
+      // route.load().then(r => route.show(this.el));
     } else {
       this.el.innerHTML = "no page found"
     }
