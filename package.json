@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config webpack/webpack.config.js --open",
-    "build": "webpack --config webpack/webpack.prod.config.js",
+    "build": "webpack --config webpack/webpack.prod.config.js && npm run copy-files",
+    "copy-files": "cp src/index.html dist && cp -r views dist",
     "prod": "node server.js"
   },
   "repository": {
