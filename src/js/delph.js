@@ -17,14 +17,21 @@ export class Delph {
     }
   }
 
+  inject(component) {    
+    const routerOutlet = this.el
+    while (routerOutlet.firstChild) {
+      routerOutlet.removeChild(routerOutlet.firstChild);
+    }    
+    routerOutlet.appendChild(new component);
+  }
+
   load(page, backButtonUsed){
     if (!backButtonUsed){
       history.pushState({ page}, null, `/${page}`);
     }
     let route =  this.routes[page];
     if (route) {
-      console.log(new route)
-      // route.load().then(r => route.show(this.el));
+      this.inject
     } else {
       this.el.innerHTML = "no page found"
     }
