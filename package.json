@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "express": "^4.15.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "@webcomponents/webcomponentsjs": "git://github.com/webcomponents/webcomponentsjs.git#v1.0.0"
   }
 }
