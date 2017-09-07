@@ -8,6 +8,6 @@ export class DefaultComponent extends HTMLElement {
     }
 
     render() {
-        return (`div>hello from default</div>`);
+        return (`<div>hello from default</div>`);
     }
 }
