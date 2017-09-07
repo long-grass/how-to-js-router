@@ -31,7 +31,7 @@ export class Delph {
     }
     let route =  this.routes[page];
     if (route) {
-      this.inject
+      this.inject(route)
     } else {
       this.el.innerHTML = "no page found"
     }
