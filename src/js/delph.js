@@ -23,7 +23,7 @@ export class Delph {
     }
     let route =  this.routes[page];
     if (route) {
-      // route.load().then(r => route.show(this.el));
+      console.log(new route)
     } else {
       this.el.innerHTML = "no page found"
     }
