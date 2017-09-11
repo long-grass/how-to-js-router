@@ -21,7 +21,7 @@ export class Delph {
     history.pushState({ page}, null, `/${page}`);
     let route =  this.routes[page];
     if (route) {
-      route.load().then(r => route.show(this.el));
+      console.log(route)
     } else {
       this.el.innerHTML = "no page found"
     }
