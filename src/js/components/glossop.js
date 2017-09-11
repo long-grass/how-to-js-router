@@ -15,3 +15,5 @@ export class GlossopComponent extends HTMLElement {
                  </ul>`)
     }
 }
+
+customElements.define('glossop-component', GlossopComponent);

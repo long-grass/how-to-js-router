@@ -11,3 +11,5 @@ export class DefaultComponent extends HTMLElement {
         return (`i am the homepage`)
     }
 }
+
+customElements.define('default-component', DefaultComponent);

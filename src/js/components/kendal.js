@@ -13,3 +13,5 @@ export class KendalComponent extends HTMLElement {
                 </div>`)
     }
 }
+
+customElements.define('kendal-component', KendalComponent);
