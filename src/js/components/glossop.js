@@ -3,8 +3,13 @@ export class GlossopComponent extends HTMLElement {
         super();
     }
 
+    handleClick(){
+        console.log("ive been clicked")
+    }
+
     connectedCallback() {
         this.innerHTML = this.render();
+        this.onClick = this.handleClick
     }
 
     render() {

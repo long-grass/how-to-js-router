@@ -3,8 +3,13 @@ export class KendalComponent extends HTMLElement {
         super();
     }
 
+    handleClick(){
+        console.log("clicked")
+    }
+
     connectedCallback() {
         this.innerHTML = this.render();
+        this.addEventListener('click',this.handleClick)
     }
 
     render() {
