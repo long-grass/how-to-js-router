@@ -1,21 +1,19 @@
 export class KendalComponent extends HTMLElement {
-    // constructor() {
-    //     super();
-    // }
-
+    
     handleClick(){
         console.log("clicked")
+        this.state.counter += 1
+        this.render()
     }
 
     connectedCallback() {
-        this.innerHTML = this.render();
+        this.state = {counter:0}
+        this.render();
         this.addEventListener('click',this.handleClick)
     }
 
     render() {
-        return (`<div style="height:500px;background:orange">
-                    <span style="margin-top:25%;color:steelblue">placeholder for kendal information</span>
-                </div>`)
+        this.innerHTML = `<div>Page Counter = ${this.state.counter}</div>`
     }
 }
 
