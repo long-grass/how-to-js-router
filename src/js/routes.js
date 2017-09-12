@@ -1,7 +1,9 @@
-import { Page } from './page';
+import { GlossopComponent } from './components/glossop'
+import { KendalComponent } from './components/kendal'
+import { DefaultComponent } from './components/default'
 
 export const routes = {
-    glossop: new Page('glossop'),
-    kendal:  new Page('kendal'),
-    '' : new Page('default')
+    glossop: GlossopComponent,
+    kendal:  KendalComponent,
+    '' : DefaultComponent
 }
