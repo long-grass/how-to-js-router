@@ -1,7 +1,7 @@
 export class GlossopComponent extends HTMLElement {
-    constructor() {
-        super();
-    }
+    // constructor() {
+    //     super();
+    // }
 
     handleClick(){
         console.log("ive been clicked")

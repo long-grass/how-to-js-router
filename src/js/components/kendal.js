@@ -1,7 +1,7 @@
 export class KendalComponent extends HTMLElement {
-    constructor() {
-        super();
-    }
+    // constructor() {
+    //     super();
+    // }
 
     handleClick(){
         console.log("clicked")

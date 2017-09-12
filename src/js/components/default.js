@@ -1,9 +1,11 @@
 export class DefaultComponent extends HTMLElement {
-    constructor() {
-        super();
-    }
+    // constructor() {
+    //     // super();
+    // }
 
     connectedCallback() {
+        console.log(DefaultComponent)
+        console.log(HTMLElement)
         this.innerHTML = this.render();
     }
 
