@@ -4,7 +4,7 @@ export class KendalComponent extends HTMLElement {
     
     handleClick(){
         console.log("clicked")
-        this.state.counter += 1
+        document.dispatchEvent(new CustomEvent('action', { detail: 'increaseCount' }));
         this.render()
     }
 
