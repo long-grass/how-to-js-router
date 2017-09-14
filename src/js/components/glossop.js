@@ -10,7 +10,7 @@ export class GlossopComponent extends HTMLElement {
     }
 
     render() {
-        this.innerHTML (`<ul style="color:white;background: cornflowerblue;display:block;list-style:none">
+        this.innerHTML = (`<ul style="color:white;background: cornflowerblue;display:block;list-style:none">
                      <li>glossop</li>
                      <li>hadfield</li>
                      <li>tintwistle</li>

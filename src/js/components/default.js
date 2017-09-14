@@ -7,7 +7,7 @@ export class DefaultComponent extends HTMLElement {
     }
 
     render() {
-        this.innerHTML (`i am the homepage`)
+        this.innerHTML = (`i am the homepage`)
     }
 }
 
