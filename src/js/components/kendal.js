@@ -3,7 +3,7 @@ export class KendalComponent extends HTMLElement {
 
     handleClick(){
         console.log("clicked")
-        this.state.clicked = "clicked"
+        this.state.clicked = "yes"
         this.render()
     }
 
@@ -15,9 +15,11 @@ export class KendalComponent extends HTMLElement {
     }
 
     render() {
-        this.innerHTML = `<div style="height:500px;background:orange">
-                    <span style="margin-top:25%;color:steelblue">clicked? ${this.state.clicked}</span>
-                </div>`
+        this.innerHTML = (
+            `<div style="height:100px;background:orange">
+                <span>clicked? ${this.state.clicked}</span>
+            </div>`
+        )
     }
 }
 
