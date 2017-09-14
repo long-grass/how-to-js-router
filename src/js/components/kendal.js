@@ -1,21 +1,23 @@
 export class KendalComponent extends HTMLElement {
-    constructor() {
-        super();
-    }
+   
 
     handleClick(){
         console.log("clicked")
+        this.state.clicked = "clicked"
+        this.render()
     }
 
     connectedCallback() {
-        this.innerHTML = this.render();
+        this.state = {}
+        this.state.clicked = "no"
+        this.render();
         this.addEventListener('click',this.handleClick)
     }
 
     render() {
-        return (`<div style="height:500px;background:orange">
-                    <span style="margin-top:25%;color:steelblue">placeholder for kendal information</span>
-                </div>`)
+        this.innerHTML = `<div style="height:500px;background:orange">
+                    <span style="margin-top:25%;color:steelblue">clicked? ${this.state.clicked}</span>
+                </div>`
     }
 }
 
