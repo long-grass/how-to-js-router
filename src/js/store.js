@@ -1,4 +1,4 @@
-export let store =  {
+export const store =  {
     counter: 0
 };
 
