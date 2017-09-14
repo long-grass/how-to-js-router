@@ -9,16 +9,15 @@ export class KendalComponent extends HTMLElement {
     }
 
     connectedCallback() {
-        this.state = {}
-        this.state.counter = store.counter
         this.render();
         this.addEventListener('click',this.handleClick)
+        document.addEventListener('state', () => this.render());        
     }
 
     render() {
         this.innerHTML = (
             `<div style="height:100px;background:orange">
-               <div>Page Counter = ${this.state.counter}</div>
+               <div>Page Counter = ${store.counter}</div>
             </div>`
         )
     }
