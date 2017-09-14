@@ -7,13 +7,18 @@ export class KendalComponent extends HTMLElement {
     }
 
     connectedCallback() {
-        this.state = {counter:0}
+        this.state = {}
+        this.state.counter = 0
         this.render();
         this.addEventListener('click',this.handleClick)
     }
 
     render() {
-        this.innerHTML = `<div>Page Counter = ${this.state.counter}</div>`
+        this.innerHTML = (
+            `<div style="height:100px;background:orange">
+               <div>Page Counter = ${this.state.counter}</div>
+            </div>`
+        )
     }
 }
 
