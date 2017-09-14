@@ -1,6 +1,5 @@
 export class KendalComponent extends HTMLElement {
    
-
     handleClick(){
         console.log("clicked")
         this.state.clicked = "yes"
