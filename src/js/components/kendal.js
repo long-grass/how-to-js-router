@@ -1,3 +1,5 @@
+import { store  } from "../store";
+
 export class KendalComponent extends HTMLElement {
     
     handleClick(){
@@ -8,7 +10,7 @@ export class KendalComponent extends HTMLElement {
 
     connectedCallback() {
         this.state = {}
-        this.state.counter = 0
+        this.state.counter = store.counter
         this.render();
         this.addEventListener('click',this.handleClick)
     }
