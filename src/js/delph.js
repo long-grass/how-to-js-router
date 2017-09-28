@@ -2,7 +2,7 @@ export class Delph {
     
   constructor(config){
     this.routes = config.routes;
-    // this.el = el;
+    this.routerOutlet = document.createElement('div')
     this.load(config.path)
     this.handleBackButton()
   }
@@ -18,7 +18,7 @@ export class Delph {
   }
 
   inject(component) {
-    const routerOutlet = this.el
+    const routerOutlet = this.routerOutlet
     while (routerOutlet.firstChild) {
       routerOutlet.removeChild(routerOutlet.firstChild);
     }
@@ -33,7 +33,7 @@ export class Delph {
     if (route) {
       this.inject(route)
     } else {
-      this.el.innerHTML = "no page found"
+      this.routerOutlet.innerHTML = "no page found"
     }
   }
 }
