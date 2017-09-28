@@ -1,31 +1,24 @@
-import { Delph } from './delph'
+import {store} from './store';
+import { Delph } from './Delph';
+import { Header } from './components/header'
+import { Footer } from './components/footer'
 import { routes } from './routes'
+
 
 export class Index {
 
     constructor(){
-      const page = window.location.pathname.substr(1) || ''
-      let main = document.getElementById('main')
-      this.delph = new Delph(routes, main, page)
-      this.makeHeader(routes)
+      let path = window.location.pathname.substr(1)
+      let config = {
+          routes:routes,
+          store:store,
+          path: path
+        }
+      new Header(config)
+      new Delph(config)
+      new Footer(config)
     }
-
-    makeHeader(routes){
-      let el = document.getElementById('header')
-      Object.keys(routes).map(route => {
-        let e = document.createElement("li");
-        e.innerHTML = route || "index"
-        e.addEventListener('click', () => {this.load(route)})
-        el.appendChild(e);
-      })
-    }
- 
-    load(link){
-      console.log(link)
-      this.delph.load(link)
-    }
-    
-};
-document.addEventListener('DOMContentLoaded', () => {
-  new Index()
-});
+  };
+  document.addEventListener('DOMContentLoaded', () => {
+    new Index()
+  })
