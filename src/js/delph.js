@@ -1,9 +1,9 @@
 export class Delph {
     
-  constructor(routes,el,page){
-    this.routes = routes;
-    this.el = el;
-    this.load(page)
+  constructor(config){
+    this.routes = config.routes;
+    // this.el = el;
+    this.load(config.path)
     this.handleBackButton()
   }
     

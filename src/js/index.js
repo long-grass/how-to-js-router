@@ -1,7 +1,6 @@
 import {store} from './store';
 import { Delph } from './Delph';
 import { Header } from './components/header'
-import { Footer } from './components/footer'
 import { routes } from './routes'
 
 
@@ -16,7 +15,6 @@ export class Index {
         }
       new Header(config)
       new Delph(config)
-      new Footer(config)
     }
   };
   document.addEventListener('DOMContentLoaded', () => {
