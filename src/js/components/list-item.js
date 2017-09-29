@@ -14,6 +14,7 @@ export class ListItem extends HTMLElement {
     }
 
     connectedCallback() {
+        this.store.subscribe(this.render.bind(this));
         this.addEventListener('click',this.handleClick)
         this.render()
     }
