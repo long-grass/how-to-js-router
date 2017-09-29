@@ -1,6 +1,8 @@
 function Store ()  {
   this.previousState = {}
-  this.state = {}
+  this.state = {route:{path:null},
+                kendal:{counter:0}
+              }
 };
 
 let subscribers = []
@@ -39,7 +41,7 @@ function kendalCount(kendal,action){
           let newState = {counter: kendal.counter + 1}
           return newState
       default:
-          return kendal || {counter: 0}
+          return kendal
       
   }
 }
