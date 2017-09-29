@@ -33,10 +33,8 @@ function changeRoute(route,action){
 }
 
 function kendalCount(kendal,action){
-  console.log(kendal)
   switch (action.type){
       case 'INCREASE_KENDAL':
-          // debugger
           let newState = {counter: kendal.counter + 1}
           return newState
       default:

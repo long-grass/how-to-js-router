@@ -11,14 +11,12 @@ export class Delph {
   }
   
   render(page){
-    console.log(page.kendal)
-    var self = this
     while (this.routerOutlet.firstChild) {
       this.routerOutlet.removeChild(this.routerOutlet.firstChild);
     }
-    setTimeout(function(){
-    self.routerOutlet.appendChild(new self.routes[page.route.path])
-    console.log("yes")},500)
+    setTimeout (() => {
+      this.routerOutlet.appendChild(new this.routes[page.route.path])
+    },500)
   }
 }
 

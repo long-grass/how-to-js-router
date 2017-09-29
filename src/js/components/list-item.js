@@ -18,11 +18,9 @@ export class ListItem extends HTMLElement {
   connectedCallback() {
     this.store.subscribe(this.render.bind(this));
     this.addEventListener('click',this.handleClick)
-    // this.render()
   }
 
   render() {
-    console.log(this.store)
     let linkColour
     this.route.path === this.store.state.route.path ?
       linkColour = "color:red" :
