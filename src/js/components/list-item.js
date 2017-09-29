@@ -10,23 +10,17 @@ export class ListItem extends HTMLElement {
     }
 
     handleClick(){
-        if (this.route.path != this.store.state.route.path){
-          this.store.dispatch(loadRoute({path:this.route.path}))
-        }
+
     }
 
     connectedCallback() {
         this.addEventListener('click',this.handleClick)
+        this.render()
     }
 
     render(previousState,state) {
-        if (previousState.route.path != state.route.path ){
-          let linkColour
-          this.route.path === state.route.path ? 
-            linkColour = "color:red" : 
-            linkColour = "color:blue" 
-          this.innerHTML = (`<li style=${linkColour}>${this.route.text}</liv>`)
-        }
+          this.innerHTML = (`<li>${this.route.text}</liv>`)
+
 
     }
 }

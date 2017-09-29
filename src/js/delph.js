@@ -3,6 +3,7 @@ export class Delph {
   constructor(config){
     this.routes = config.routes;
     this.routerOutlet = document.createElement('div')
+    document.body.appendChild(this.routerOutlet)
     this.load(config.path)
     this.handleBackButton()
   }
