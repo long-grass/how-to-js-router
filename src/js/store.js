@@ -1,5 +1,5 @@
 function Store ()  {
-  this.state = {route: null}
+  this.state = {}
 };
 
 let subscribers = []

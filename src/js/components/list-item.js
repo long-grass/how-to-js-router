@@ -18,12 +18,16 @@ export class ListItem extends HTMLElement {
   connectedCallback() {
     this.store.subscribe(this.render.bind(this));
     this.addEventListener('click',this.handleClick)
-    this.render()
+    // this.render()
   }
 
   render() {
-    console.log('am i rendering')
-    this.innerHTML = (`<li>${this.route.text}</liv>`)
+    console.log(this.store)
+    let linkColour
+    this.route.path === this.store.state.route.path ?
+      linkColour = "color:red" :
+      linkColour = "color:blue"
+    this.innerHTML = (`<li style=${linkColour}>${this.route.text}</liv>`)
   }
 }
 
