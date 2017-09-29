@@ -28,7 +28,7 @@ function changeRoute(route,action){
           let newRoute = action.route
           return newRoute
       default:
-          return route || ''
+          return route || {path:null}
 
   }
 }
