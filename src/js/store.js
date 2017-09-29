@@ -10,7 +10,7 @@ Store.prototype.subscribe = function(fn){
 
 Store.prototype.dispatch = function(action){
   this.state.route = changeRoute(this.state.route,action)
-  subscribers.forEach(subscriber => subscriber(this.state.route))
+  subscribers.forEach(subscriber => subscriber(this.state))
 }
 
 function changeRoute(route,action){
