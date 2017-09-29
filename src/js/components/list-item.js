@@ -20,8 +20,6 @@ export class ListItem extends HTMLElement {
 
     render(previousState,state) {
           this.innerHTML = (`<li>${this.route.text}</liv>`)
-
-
     }
 }
 
