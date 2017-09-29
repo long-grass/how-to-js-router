@@ -19,8 +19,7 @@ Store.prototype.dispatch = function(action){
     route: changeRoute(this.state.route,action),
     kendal: kendalCount(this.state.kendal,action)
   }
-  console.log(this.state.kendal)
-  subscribers.forEach(subscriber => subscriber(this.state))
+  subscribers.forEach(subscriber => subscriber(this.previousState,this.state))
 }
 
 function changeRoute(route,action){
