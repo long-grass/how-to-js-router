@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/cerico/how-to-js-router#readme",
   "devDependencies": {
+    "babel-preset-stage-2": "^6.24.1",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   },
