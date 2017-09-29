@@ -1,4 +1,5 @@
 function Store ()  {
+  this.previousState = {}
   this.state = {}
 };
 
@@ -13,6 +14,7 @@ Store.prototype.getState = function(){
 }
 
 Store.prototype.dispatch = function(action){
+  this.previousState =  { ...this.state }
   this.state = {
     route: changeRoute(this.state.route,action),
     kendal: kendalCount(this.state.kendal,action)
