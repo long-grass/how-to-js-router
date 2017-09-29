@@ -11,7 +11,7 @@ export class Delph {
   }
   
   render(page){
-    console.log(page)
+    console.log(page.kendal)
     var self = this
     while (this.routerOutlet.firstChild) {
       this.routerOutlet.removeChild(this.routerOutlet.firstChild);
