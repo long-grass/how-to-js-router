@@ -9,7 +9,10 @@ Store.prototype.subscribe = function(fn){
 }
 
 Store.prototype.dispatch = function(action){
-  this.state.route = changeRoute(this.state.route,action)
+  this.state = {
+    route: changeRoute(this.state.route,action),
+    kendal: kendalCount(this.state.kendal,action)
+  }
   subscribers.forEach(subscriber => subscriber(this.state))
 }
 
