@@ -2,18 +2,15 @@ function Store ()  {
   this.state = {route: null}
 };
 
-let routeChanger
+let subscribers = []
 
 Store.prototype.subscribe = function(fn){
-  console.log(fn)
-  routeChanger = fn
+  subscribers.push(fn)
 }
 
 Store.prototype.dispatch = function(action){
-  console.log(action)
-  console.log(this.state)
   this.state.route = changeRoute(this.state.route,action)
-  routeChanger(this.state.route)
+  subscribers.forEach(subscriber => subscriber(this.state.route))
 }
 
 function changeRoute(route,action){
