@@ -1,10 +1,13 @@
+import { loadRoute } from './actions'
+
 export class Delph {
     
   constructor(config){
     this.routes = config.routes;
     this.routerOutlet = document.createElement('div')
     document.body.appendChild(this.routerOutlet)
-    this.load(config.path)
+    config.store.subscribe(this.render.bind(this));
+    config.store.dispatch(loadRoute({path:config.path}))
     this.handleBackButton()
   }
     
@@ -26,11 +29,11 @@ export class Delph {
     routerOutlet.appendChild(new component);
   }
 
-  load(page, backButtonUsed){
+  render(page, backButtonUsed){
     if (!backButtonUsed){
-      history.pushState({ page}, null, `/${page}`);
+      history.pushState({ page}, null, `/${page.path}`);
     }
-    let route =  this.routes[page];
+    let route =  this.routes[page.path];
     if (route) {
       this.inject(route)
     } else {
