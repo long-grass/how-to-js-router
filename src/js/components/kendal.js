@@ -18,12 +18,14 @@ export class KendalComponent extends HTMLElement {
     this.addEventListener('click',this.handleClick);        
   }
 
-  render() {
-    this.innerHTML = (
-      `<div style="height:100px;background:orange">
-        <div>Page Counter = ${this.store.state.kendal.counter}</div>
-      </div>`
-    )
+  render(previousState,state) {
+    if (previousState.kendal.counter != state.kendal.counter){
+      this.innerHTML = (
+        `<div style="height:100px;background:orange">
+          <div>Page Counter = ${this.store.state.kendal.counter}</div>
+        </div>`
+      )
+    }
   }
 }
 
