@@ -6,7 +6,6 @@ export function loadRoute (route){
 }
 
 export function increaseKendal (count){
-    console.log(count)
     return {
         type: 'INCREASE_KENDAL',
         count
