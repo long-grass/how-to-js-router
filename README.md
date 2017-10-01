@@ -1,4 +1,4 @@
-### Follow how to build this at
+### Follow how to build this at [https://cerico.github.io](https://cerico.github.io)
 
 
 [Part One](https://cerico.github.io/posts/2017-08-26---javascript-router)
@@ -10,3 +10,8 @@
 [Part Four](https://cerico.github.io/posts/2017-09-12---javascript-router-with-state)
 
 [Part Five](https://cerico.github.io/posts/2017-09-14---connecting-router-with-state)
+
+### OR TLDR
+
+1. git clone 
+2. npm install && npm run dev
