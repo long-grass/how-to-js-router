@@ -10,7 +10,7 @@
 
 [https://cerico.github.io/posts/2017-09-14---connecting-router-with-state](Part Five)
 
-[https://cerico.github.io/posts/2017-08-26---javascript-router](Part One)
+[Part One](https://cerico.github.io/posts/2017-08-26---javascript-router)
 [https://github.com/cerico/how-to-js-router/tree/0.20.0](https://github.com/cerico/how-to-js-router/tree/0.20.0)
 [https://github.com/cerico/how-to-js-router/tree/0.20.0](https://github.com/cerico/how-to-js-router/tree/0.20.0)
 [https://github.com/cerico/how-to-js-router/tree/0.20.0](https://github.com/cerico/how-to-js-router/tree/0.20.0)
