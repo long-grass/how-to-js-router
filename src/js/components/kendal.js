@@ -1,26 +1,30 @@
 import { store  } from "../store";
+import { increaseKendal } from '../actions'
 
 export class KendalComponent extends HTMLElement {
+
+  constructor(){
+    super()
+    this.store = store
+    this.store.subscribe(this.render.bind(this))        
+  }
     
-    handleClick(){
-        console.log("clicked")
-        document.dispatchEvent(new CustomEvent('action', { detail: 'increaseCount' }));
-        this.render()
-    }
+  handleClick(){
+    this.store.dispatch(increaseKendal(1))
+  }
 
-    connectedCallback() {
-        this.render();
-        this.addEventListener('click',this.handleClick)
-        document.addEventListener('state', () => this.render());        
-    }
+  connectedCallback() {
+    this.render();
+    this.addEventListener('click',this.handleClick);        
+  }
 
-    render() {
-        this.innerHTML = (
-            `<div style="height:100px;background:orange">
-               <div>Page Counter = ${store.counter}</div>
-            </div>`
-        )
-    }
+  render() {
+    this.innerHTML = (
+      `<div style="height:100px;background:orange">
+        <div>Page Counter = ${this.store.state.kendal.counter}</div>
+      </div>`
+    )
+  }
 }
 
 customElements.define('kendal-component', KendalComponent);
