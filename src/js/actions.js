@@ -4,3 +4,11 @@ export function loadRoute (route){
         route
     }
 }
+
+export function increaseKendal (count){
+    console.log(count)
+    return {
+        type: 'INCREASE_KENDAL',
+        count
+    }
+}
