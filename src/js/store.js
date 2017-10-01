@@ -12,7 +12,7 @@ Store.prototype.subscribe = function(fn){
 }
 
 Store.prototype.unsubscribe = function(fn){
-  subscribers.push(fn)
+  subscribers.splice(subscribers.indexOf(fn), 1);
 }
 
 Store.prototype.getState = function(){

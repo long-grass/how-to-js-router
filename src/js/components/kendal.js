@@ -6,7 +6,8 @@ export class KendalComponent extends HTMLElement {
   constructor(){
     super()
     this.store = store
-    this.store.subscribe(this.shouldUpdate.bind(this))        
+    this.subscriber = this.shouldUpdate.bind(this)
+    this.store.subscribe(this.subscriber)        
   }
     
   handleClick(){
@@ -19,7 +20,7 @@ export class KendalComponent extends HTMLElement {
   }
 
   disconnectedCallback() {
-    this.store.unsubscribe("?")       
+    this.store.unsubscribe(this.subscriber)       
   }
 
   shouldUpdate(){
