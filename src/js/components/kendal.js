@@ -5,14 +5,9 @@ export class KendalComponent extends HTMLElement {
     constructor(){
         super()
         this.store = store
-        console.log(store.state.kendal)
-        console.log(9)
         this.subscriber = this.render.bind(this)
         this.store.subscribe(this.subscriber)
-        this.store.getState()
-    
-        // this.render()
-        
+        this.store.getState() 
     }
     
     handleClick(){
