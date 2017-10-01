@@ -1,8 +1,6 @@
 export class DefaultComponent extends HTMLElement {
 
     connectedCallback() {
-        console.log(DefaultComponent)
-        console.log(HTMLElement)
         this.render();
     }
 

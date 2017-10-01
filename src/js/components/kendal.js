@@ -6,7 +6,8 @@ export class KendalComponent extends HTMLElement {
   constructor(){
     super()
     this.store = store
-    this.store.subscribe(this.shouldUpdate.bind(this))        
+    this.subscriber = this.shouldUpdate.bind(this)
+    this.store.subscribe(this.subscriber)        
   }
     
   handleClick(){
@@ -18,6 +19,10 @@ export class KendalComponent extends HTMLElement {
     this.addEventListener('click',this.handleClick);        
   }
 
+  disconnectedCallback() {
+    this.store.unsubscribe(this.subscriber)       
+  }
+
   shouldUpdate(){
     if (this.store.previousState.kendal.counter != this.store.state.kendal.counter){
       this.render()
@@ -26,6 +31,7 @@ export class KendalComponent extends HTMLElement {
   
 
   render() {
+    console.log('kendal component')
       this.innerHTML = (
         `<div style="height:100px;background:orange">
           <div>Page Counter = ${this.store.state.kendal.counter}</div>
