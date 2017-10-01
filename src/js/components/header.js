@@ -11,7 +11,8 @@ export class Header  {
   }
 
   render(){
-    Object.keys(this.routes).map(route => {
+    // console.log(this.routes)
+    this.routes.map(route => {
       let link = new ListItem(route,this.store)
       header.appendChild(link);
     })

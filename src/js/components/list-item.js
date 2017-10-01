@@ -5,8 +5,8 @@ export class ListItem extends HTMLElement {
   constructor(route,store){
     super()
     this.route = {
-      text: route || 'index',
-      path: route
+      text: route.title,
+      path: route.path
     }
       this.store = store
     }
