@@ -15,6 +15,18 @@ module.exports = options => {
          }]
        },
     },
+    module: {
+      loaders: [
+        {
+          test: /\.jsx?$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader',
+          query: {
+            presets:[ 'stage-2' ]
+          }
+        }
+      ]
+    }
   }
 }
 
