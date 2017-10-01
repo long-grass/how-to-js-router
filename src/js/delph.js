@@ -10,13 +10,16 @@ export class Delph {
     config.store.dispatch(loadRoute({path:config.path}))
   }
   
-  render(page){
-    while (this.routerOutlet.firstChild) {
-      this.routerOutlet.removeChild(this.routerOutlet.firstChild);
+  render(previousState,state){
+    if (previousState.route.path != state.route.path ){
+      let page = state.route.path
+      while (this.routerOutlet.firstChild) {
+        this.routerOutlet.removeChild(this.routerOutlet.firstChild);
+      }
+      setTimeout (() => {
+        this.routerOutlet.appendChild(new this.routes[page])
+      },500)
     }
-    setTimeout (() => {
-      this.routerOutlet.appendChild(new this.routes[page.route.path])
-    },500)
   }
 }
 

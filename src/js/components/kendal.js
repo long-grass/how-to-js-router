@@ -19,12 +19,13 @@ export class KendalComponent extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = (
-      `<div style="height:100px;background:orange">
-        <div>Page Counter = ${this.store.state.kendal.counter}</div>
-      </div>`
-    )
-  }
+      this.innerHTML = (
+        `<div style="height:100px;background:orange">
+          <div>Page Counter = ${this.store.state.kendal.counter}</div>
+        </div>`
+      )
+    }
+  
 }
 
 customElements.define('kendal-component', KendalComponent);

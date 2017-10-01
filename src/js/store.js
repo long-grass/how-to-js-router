@@ -1,6 +1,8 @@
 function Store ()  {
   this.previousState = {}
-  this.state = {}
+  this.state = {route:{path:null},
+                kendal:{counter:0}
+              }
 };
 
 let subscribers = []
@@ -19,8 +21,7 @@ Store.prototype.dispatch = function(action){
     route: changeRoute(this.state.route,action),
     kendal: kendalCount(this.state.kendal,action)
   }
-  console.log(this.state.kendal)
-  subscribers.forEach(subscriber => subscriber(this.state))
+  subscribers.forEach(subscriber => subscriber(this.previousState,this.state))
 }
 
 function changeRoute(route,action){
@@ -29,7 +30,7 @@ function changeRoute(route,action){
           let newRoute = action.route
           return newRoute
       default:
-          return route || ''
+          return route || {path:null}
 
   }
 }
@@ -40,7 +41,7 @@ function kendalCount(kendal,action){
           let newState = {counter: kendal.counter + 1}
           return newState
       default:
-          return kendal || {counter: 0}
+          return kendal
       
   }
 }

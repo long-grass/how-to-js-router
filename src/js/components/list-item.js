@@ -20,12 +20,14 @@ export class ListItem extends HTMLElement {
     this.addEventListener('click',this.handleClick)
   }
 
-  render() {
-    let linkColour
-    this.route.path === this.store.state.route.path ?
-      linkColour = "color:red" :
-      linkColour = "color:blue"
-    this.innerHTML = (`<li style=${linkColour}>${this.route.text}</liv>`)
+  render(previousState,state) {
+    if (previousState.route.path != state.route.path ){
+      let linkColour
+      this.route.path === state.route.path ?
+        linkColour = "color:red" :
+        linkColour = "color:blue"
+      this.innerHTML = (`<li style=${linkColour}>${this.route.text}</liv>`)
+    }
   }
 }
 
