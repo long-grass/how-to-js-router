@@ -16,9 +16,7 @@ export class Delph {
       while (this.routerOutlet.firstChild) {
         this.routerOutlet.removeChild(this.routerOutlet.firstChild);
       }
-      setTimeout (() => {
-        this.routerOutlet.appendChild(new this.routes[page])
-      },500)
+      this.routerOutlet.appendChild(new this.routes[page])
     }
   }
 }

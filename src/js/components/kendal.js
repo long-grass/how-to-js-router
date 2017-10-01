@@ -6,7 +6,7 @@ export class KendalComponent extends HTMLElement {
   constructor(){
     super()
     this.store = store
-    this.store.subscribe(this.render.bind(this))        
+    this.store.subscribe(this.shouldUpdate.bind(this))        
   }
     
   handleClick(){
@@ -17,6 +17,13 @@ export class KendalComponent extends HTMLElement {
     this.render();
     this.addEventListener('click',this.handleClick);        
   }
+
+  shouldUpdate(){
+    if (this.store.previousState.kendal.counter != this.store.state.kendal.counter){
+      this.render()
+    }
+  }
+  
 
   render() {
       this.innerHTML = (
